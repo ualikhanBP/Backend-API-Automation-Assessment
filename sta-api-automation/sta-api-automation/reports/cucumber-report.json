@@ -1,0 +1,123 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "openlibrary-books-api;validate-books-api-response",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Validate books API response",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 941299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I send a GET request to the OpenLibrary books API",
+            "match": {
+              "location": "src\\steps\\books.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 969805800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "src\\steps\\books.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1355199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the response time should be less than 2000 ms",
+            "match": {
+              "location": "src\\steps\\books.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 813900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the number of returned books should be 3",
+            "match": {
+              "location": "src\\steps\\books.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1641599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the book details should be correct",
+            "match": {
+              "location": "src\\steps\\books.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1823699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the thumbnail images should match the expected images",
+            "match": {
+              "location": "src\\steps\\books.steps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1010529899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the response should match the JSON schema",
+            "match": {
+              "location": "src\\steps\\books.steps.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101902699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "openlibrary-books-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "OpenLibrary Books API",
+    "tags": [],
+    "uri": "src\\features\\books.feature"
+  }
+]
