@@ -1,10 +1,4 @@
-# Backend-API-Automation-Assessment
-
-Backend API Automation Assessment for books API
-
-
-
- Overview
+🚀 Overview
 
 This repository contains an API test automation framework built as part of the Senior Test Analyst (STA) coding challenge.
 
@@ -20,23 +14,20 @@ The solution focuses on:
 
 Clean architecture
 
-Maintainability \& scalability
+Maintainability & scalability
 
 Real-world API testing practices
 
 Contract validation using JSON Schema
 
 
-
 API Under Test
 
 Method: GET
 Endpoint:
-https://openlibrary.org/api/books?bibkeys=ISBN:0201558025,LCCN:93005405,ISBN:1583762027\&format=json
+https://openlibrary.org/api/books?bibkeys=ISBN:0201558025,LCCN:93005405,ISBN:1583762027&amp;format=json
 
-
-
-Test Coverage
+✅ Test Coverage
 
 The following validations are implemented:
 
@@ -57,10 +48,9 @@ Compared with baseline images stored in the repo
 ✔ JSON Schema validation to verify the API contract
 
 
-
 Tech Stack
 Tool	Purpose
-TypeScript	for Strong typing \& maintainability
+TypeScript	for Strong typing & maintainability
 Playwright	for API request handling
 Cucumber	for BDD / Gherkin syntax
 Chai	for Assertions
@@ -75,7 +65,7 @@ sta-api-automation/
 │   ├── api/
 │   │   ├── clients/        # API client (request handling)
 │   │   ├── pages/          # API Page Objects (POM)
-│   │   └── utils/          # Helpers \& test configuration
+│   │   └── utils/          # Helpers & test configuration
 │   │
 │   ├── features/           # Gherkin feature files
 │   ├── steps/              # Step definitions
@@ -112,14 +102,13 @@ BooksApiPage → endpoint-specific logic
 Step definitions → business-level assertions
 
 
-
 Configuration-Driven Image Validation
 
 Thumbnail image checks use a central configuration mapping:
 imageMapping: {
-'ISBN:0201558025': 'assets/images/135182-S.jpg',
-'LCCN:93005405': 'assets/images/240726-S.jpg',
-'ISBN:1583762027': 'assets/images/14882287-S.jpg'
+  'ISBN:0201558025': 'assets/images/135182-S.jpg',
+  'LCCN:93005405': 'assets/images/240726-S.jpg',
+  'ISBN:1583762027': 'assets/images/14882287-S.jpg'
 }
 
 This approach:
@@ -129,7 +118,6 @@ Avoids hardcoding
 Makes adding/removing books trivial
 
 Improves long-term maintainability
-
 
 
 Image Comparison Strategy
@@ -146,7 +134,7 @@ Validates the entire API contract for all returned books dynamically
 
 Checks required fields:
 
-bib\_key, info\_url, preview, preview\_url, thumbnail\_url
+bib_key, info_url, preview, preview_url, thumbnail_url
 
 Uses Ajv + ajv-formats to support URI validation
 
@@ -163,12 +151,10 @@ Node.js 18+
 npm
 
 
-
 Install Dependencies
 npm install
 npx playwright install
 npm install ajv ajv-formats
-
 
 
 TypeScript Check
@@ -176,7 +162,6 @@ npm run typecheck
 
 Run Tests
 npm test
-
 
 
 Reports
@@ -188,6 +173,3 @@ Results are displayed in the console
 A JSON report is generated at:
 reports/cucumber-report.json
 This can be integrated with external reporting tools if required.
-
-
-
